@@ -18,7 +18,8 @@ module.exports = {
         prependData: `
         @import "@/assets/css/common.scss";
         `
-      }
+      },
+      less:{}
     }
   }
 }

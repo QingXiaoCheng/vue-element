@@ -1,0 +1,126 @@
+[
+  {
+    "id":"0",
+    "menutitle":"首页",
+    "menuIcon":"el-icon-eleme",
+    "link": "mainpage"
+  },
+  {
+    "id":"1",
+    "menutitle": "HTML5",
+    "menuIcon": "el-icon-grape",
+    "children": [
+      {
+        "id": "11",
+        "menutitle": "canvas",
+        "link": "/canvas"
+      },
+      {
+        "id": "12",
+        "menutitle": "新表单元素",
+        "link": "/form"
+      },
+      {
+        "id": "13",
+        "menutitle": "媒体元素",
+        "link": "/media"
+      },
+      {
+        "id": "14",
+        "menutitle": "新语义标签",
+        "link": "/semantic"
+      }
+    ]
+  },
+  {
+    "id":"2",
+    "menutitle": "CSS",
+    "menuIcon": "el-icon-watermelon",
+    "children": [
+      {
+        "id": "21",
+        "menutitle": "引入方式",
+        "link": "/linkstyle"
+      },
+      {
+        "id": "22",
+        "menutitle": "选择器",
+        "link": "/selector"
+      },
+      {
+        "id": "23",
+        "menutitle": "常用属性",
+        "link": "/properties"
+      }
+    ]
+  },
+  {
+    "id":"3",
+    "menutitle": "JS",
+    "menuIcon": "el-icon-cherry",
+    "children": [
+      {
+        "id": "31",
+        "menutitle": "JS基础",
+        "link": "/basicjs"
+      },
+      {
+        "id": "32",
+        "menutitle": "JS高级",
+        "link": "/advancedjs"
+      }
+    ]
+  },
+  {
+    "id":"4",
+    "menutitle": "浏览器",
+    "menuIcon": "el-icon-pear",
+    "children": [
+      {
+        "id": "41",
+        "menutitle": "计算机网络结构",
+        "link": "/css"
+      },
+      {
+        "id": "42",
+        "menutitle": "HTTP相关",
+        "link": "/css"
+      }
+    ]
+  }, 
+  {
+    "id":"5",
+    "menutitle": "框架篇",
+    "menuIcon": "el-icon-orange",
+    "children": [
+      {
+        "id": "51",
+        "menutitle": "VUE",
+        "link": "/vue"
+      },
+      {
+        "id": "52",
+        "menutitle": "REACT",
+        "link": "/react"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "menutitle": "算法",
+    "menuIcon": "el-icon-apple",
+    "children":[
+      {
+        "id": "61",
+        "menutitle": "VUE",
+        "link": "/algorithm"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "menutitle": "创建文章",
+    "menuIcon": "el-icon-edit-outline",
+    "link": "createartical"
+  }
+]
