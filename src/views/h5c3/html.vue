@@ -71,10 +71,12 @@ export default{
     },
     toLookAr(scope){
       console.log('scope',scope);
-      this.$store.commit('setArticalId', scope.row.articleID)
+      this.$store.commit('setArticalId', scope.row.articleId)
       this.$router.push({
         name:'look',
-        params: scope.row.articleID
+        params: {
+          articleId:scope.row.articleId
+        }
       })
     }
   }

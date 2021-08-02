@@ -9,22 +9,20 @@ export default {
   name:'look',
   data(){
     return {
-      lookValue: `` 
+      lookValue: ``,
+      articleId:'' 
     }
   },
-  created(){
-    console.log('this.$router', this.$route);
-    let data = {
-      articalId: 'H5C3-HTML-1'
-    }
-    this.$api.getArtical(data).then(res=>{  
-      if(res.status === 200) {
-        this.lookValue = res.data
-      } 
-    })
+  created(){ 
+    this.articleId = this.$route.params.articleId
+   
+    this.getArtical()
   },
   methods:{ 
-    getArtical(data) {
+    getArtical() {
+      let data = {
+        articalId: this.articleId
+      }
       this.$api.getArtical(data).then(res=>{  
         if(res.status === 200) {
           this.lookValue = res.data

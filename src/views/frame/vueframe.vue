@@ -73,19 +73,19 @@ export default{
           status: '完成',
           title: '理解 Javascript 执行上下文和执行栈',
           count:1,
-          articleID: Math.random()
+          articleId: Math.random()
         }, {
           date: '2016-05-02',
           status: '完成',
           title: '理解 Javascript 执行上下文和变量对象',
           count:1,
-          articleID: Math.random()
+          articleId: Math.random()
         },{
           date: '2016-05-02',
           status: '未完成',
           title: '理解 Javascript 内存机制',
           count:1,
-          articleID: Math.random()
+          articleId: Math.random()
         }]
     }
   }
