@@ -16,4 +16,17 @@ body > .el-container {
    overflow: hidden;
 }
 
- 
+.table-title{ 
+  span{
+    color: #337ab7;
+  cursor: pointer;
+  }
+}
+
+.table-title span:hover{
+  color: #20a0ff;
+}
+
+.el-button{
+  border: none!important;
+}

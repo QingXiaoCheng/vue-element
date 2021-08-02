@@ -10,7 +10,16 @@ module.exports = {
   devServer: {
     host: '0.0.0.0', // 设置为0.0.0.0则所以地址都能访问
     port: 8081,
-    open: true    // 设置自动打开浏览器
+    open: true ,   // 设置自动打开浏览器
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8081/',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': '/mock'
+        }
+      }
+    } 
   },
   css:{
     loaderOptions: {
@@ -20,6 +29,16 @@ module.exports = {
         `
       },
       less:{}
+    }
+  },
+  configureWebpack: {
+    module: {
+      rules: [
+        {
+          test: /\.md$/,
+          use: ["text-loader"]
+        }
+      ]
     }
   }
 }
