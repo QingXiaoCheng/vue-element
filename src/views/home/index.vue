@@ -19,7 +19,7 @@
         </el-menu>  
       </el-aside>
      </div> 
-      <el-container>
+      <el-container style="width:80%;">
         <el-header height="100px" > 
           <div class="header">
             <i class="el-icon-s-fold" style="margin-right: 15px"></i> 
@@ -47,7 +47,7 @@
           </el-tag>
           </div>
         </el-header> 
-        <el-main>
+        <el-main style="width:100%;">
            <router-view/>
         </el-main>
          
@@ -56,7 +56,7 @@
   </div>
 </template>
 
-<script>  
+<script>   
 import { mapState } from 'vuex'
 export default{
   data(){
@@ -69,10 +69,11 @@ export default{
     }
   },
   created(){    
-    this.$api.getmenu().then(res=>{
-      // console.log(res, 'mock请求数据');
-      this.menulist = res.data
+    this.$api.getmenu().then(res=>{ 
+      this.menulist = res.data 
+      this.$store.commit('setMenulist', res.data)
     })
+    
   },
   watch:{
     $route(route) { 
@@ -185,6 +186,7 @@ export default{
   overflow: hidden;
 }
 .aside{ 
+  width: 200px;
   height: 100%;
   overflow: scroll;
   .el-aside,.el-menu{

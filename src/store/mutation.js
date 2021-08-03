@@ -8,6 +8,12 @@ export default {
   setActivemenu(state, activemenu) {
     state.activemenu = activemenu
   },
+  setMenulist(state, menulist){
+    state.menulist = menulist
+  },
+  setMenuOptions(state, menuOptions){
+    state.menuOptions = menuOptions
+  },
   setArticalId(state, articalId) {
     state.articalId = articalId
   }

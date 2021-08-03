@@ -18,7 +18,7 @@
         prop="title"
         label="标题">
          <template slot-scope="scope">
-          <div class="table-title"> <span @click="$router.push('look')">{{ scope.row.title }} </span></div>
+          <div class="table-title"> <span @click="toLookAr(scope.row)">{{ scope.row.title }} </span></div>
         </template>
       </el-table-column> 
       <el-table-column
@@ -79,6 +79,42 @@ export default {
           count:1,
           articleId: Math.random()
         }]
+    }
+  },
+  created(){
+    this.getTableData()
+  },
+  methods:{
+    getTableData(){
+      let data = {
+        out:'JS',
+        in:'advancejs'
+      }
+      this.$api.getTableList(data).then(res=>{ 
+        console.log('==', res);
+        this.tableData = res.data
+      })
+    },
+    toLookAr(row){ 
+      this.$store.commit('setArticalId', row.articleId)
+      this.$router.push({
+        name:'look',
+        params: {
+          articleId: row.articleId
+        }
+      })
+    },
+     handleEdit(i, row){
+      console.log(i, row);
+      this.$router.push({
+        name:'look',
+        params: {
+          articleId: row.articleId,
+          subfield: true,
+          editable: true,
+          toolbarsFlag: true
+        }
+      })
     }
   }
 }

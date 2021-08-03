@@ -23,26 +23,6 @@
         prop="count"
         label="阅读次数" width="140">
       </el-table-column>
-
-      <!-- <el-table-column
-      align="right" width="240">
-      <template slot="header" slot-scope="scope">
-        <el-input
-          v-model="searchkey"
-          size="mini"
-          placeholder="输入关键字搜索"/>
-      </template>
-      <template slot-scope="scope">
-        <el-button
-          size="mini"
-          @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-        <el-button
-          size="mini"
-          type="primary"
-          @click="handleDelete(scope.$index, scope.row)">详情</el-button>
-      </template>
-    </el-table-column> -->
-
      <el-table-column label="操作" width="240">
       <template slot-scope="scope">
         <el-button
@@ -68,7 +48,7 @@ export default{
   data(){
     return {
       searchkey: '',
-       tableData: []
+      tableData: []
     }
   },
   created(){

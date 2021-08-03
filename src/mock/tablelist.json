@@ -1,6 +1,6 @@
 {
   "H5C3":{
-    "HTML":[
+    "html":[
       {
         "date": "2016-05-02", "status": "完成","title": "认识HTML标签", "count":1,"articleId": "H5C3-HTML-1"
       },
@@ -8,7 +8,7 @@
         "date": "2016-05-02", "status": "完成", "title": "了解H5新增的标签", "count":1,"articleId": "H5C3-HTML-2"
       }
     ],
-    "CSS":[
+    "css":[
       {
         "date": "2016-05-02","status": "完成","title": "认识CSS选择器","count":1,
         "articleId": ""
@@ -28,8 +28,18 @@
     ],
     "interview":[
       {
-        "date": "2016-05-02", "status": "完成","title": "认识HTML标签", "count":1,"articleId": ""
+        "date": "2016-05-02", "status": "完成","title": "前端基础面试题", "count":1,"articleId": ""
       }
+    ]
+  },
+  "JS":{
+    "basicjs":[],
+    "advancejs":[{
+      "date": "2016-05-02", "status": "完成","title": "JS 测试", "count":1,"articleId": "JS-advancejs-1"
+    }],
+    "interviewj":[{
+      "date": "2016-05-02", "status": "完成","title": "JS 高频面试题", "count":1,"articleId": "JS-interviewj-1"
+    }
     ]
   }
 }

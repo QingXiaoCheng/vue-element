@@ -63,7 +63,7 @@ export default{
     getTableData(){
       let data = {
         out:'H5C3',
-        in:'HTML'
+        in:'html'
       }
       this.$api.getTableList(data).then(res=>{ 
         this.tableData = res.data

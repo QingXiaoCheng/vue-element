@@ -1,6 +1,6 @@
 <template>
   <div class="look-content"> 
-    <mavon-editor v-model="lookValue" defaultOpen="preview" :subfield="false" :editable="false" :toolbarsFlag="false" />
+    <mavon-editor v-model="lookValue" defaultOpen="preview" :subfield="subfield" :editable="editable" :toolbarsFlag="toolbarsFlag" />
   </div>
 </template>
 
@@ -9,13 +9,20 @@ export default {
   name:'look',
   data(){
     return {
-      lookValue: ``,
-      articleId:'' 
+      lookValue: '',
+      articleId:'',
+      editable: false,  // 是否允许编辑
+      toolbarsFlag: false,  // 释放展示工具栏
+      subfield: false  // false-单栏 true-双栏
     }
   },
   created(){ 
-    this.articleId = this.$route.params.articleId
-   
+    let { articleId, toolbarsFlag, editable, subfield} = this.$route.params
+    this.articleId = articleId
+    console.log('ac', articleId);
+    this.toolbarsFlag = toolbarsFlag
+    this.editable = editable
+    this.subfield = subfield
     this.getArtical()
   },
   methods:{ 
@@ -25,6 +32,7 @@ export default {
       }
       this.$api.getArtical(data).then(res=>{  
         if(res.status === 200) {
+          console.log(res,'=====');
           this.lookValue = res.data
         } 
       })
@@ -34,10 +42,6 @@ export default {
 </script>
 
 
-<style lang="less" scoped>
-.look-content{
-  // background-color: #fff;
-  height: 100%;
-  // padding:20px;
-}
+<style lang="less" >
+ 
 </style>
