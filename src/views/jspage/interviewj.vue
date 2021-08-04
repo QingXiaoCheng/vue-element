@@ -72,6 +72,7 @@ export default{
           articleId:scope.row.articleId,
           subfield: false,
           editable: false,
+          toolbarsFlag: false
         }
       })
     },
