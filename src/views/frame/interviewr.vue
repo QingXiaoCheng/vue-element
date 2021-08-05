@@ -23,26 +23,6 @@
         prop="count"
         label="阅读次数" width="140">
       </el-table-column>
-
-      <!-- <el-table-column
-      align="right" width="240">
-      <template slot="header" slot-scope="scope">
-        <el-input
-          v-model="searchkey"
-          size="mini"
-          placeholder="输入关键字搜索"/>
-      </template>
-      <template slot-scope="scope">
-        <el-button
-          size="mini"
-          @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-        <el-button
-          size="mini"
-          type="primary"
-          @click="handleDelete(scope.$index, scope.row)">详情</el-button>
-      </template>
-    </el-table-column> -->
-
      <el-table-column label="操作" width="240">
       <template slot-scope="scope">
         <el-button
@@ -68,25 +48,7 @@ export default{
   data(){
     return {
       searchkey: '',
-       tableData: [{
-          date: '2016-05-02',
-          status: '完成',
-          title: '理解 Javascript 执行上下文和执行栈',
-          count:1,
-          articleId: Math.random()
-        }, {
-          date: '2016-05-02',
-          status: '完成',
-          title: '理解 Javascript 执行上下文和变量对象',
-          count:1,
-          articleId: Math.random()
-        },{
-          date: '2016-05-02',
-          status: '未完成',
-          title: '理解 Javascript 内存机制',
-          count:1,
-          articleId: Math.random()
-        }]
+      tableData: []
     }
   },
   created(){
@@ -95,8 +57,8 @@ export default{
   methods:{
     getTableData(){
       let data = {
-        out:'WEB',
-        in:'interviewm'
+        out:'FRAME',
+        in:'interviewr'
       }
       this.$api.getTableList(data).then(res=>{ 
         this.tableData = res.data

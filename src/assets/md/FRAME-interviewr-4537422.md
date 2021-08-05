@@ -1,15 +1,3 @@
-# JS 面试题合集二
-### 闭包是什么
-
-### NaN是什么，用typeof输出什么
-- NaN：not a number，表示非数字，`typeof NaN === 'number'`
-
-### JS 隐式转换和显示转换
-
-
-js面试
-https://juejin.cn/post/6844903816668643341
-
 # react 面试题
 ## state和prop区别
 state 和 props都是普通的JavaScript对象。尽管它们两者都具有影响渲染输出的信息，但它们在组件方面的功能不同。即

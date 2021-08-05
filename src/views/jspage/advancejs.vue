@@ -100,7 +100,10 @@ export default {
       this.$router.push({
         name:'look',
         params: {
-          articleId: row.articleId
+          articleId: row.articleId,
+          subfield: false,
+          editable: false,
+          toolbarsFlag: false
         }
       })
     },

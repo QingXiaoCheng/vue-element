@@ -16,6 +16,8 @@ import interviewm from '../views/mobileweb/interviewm.vue'
 
 import vueframe from '../views/frame/vueframe.vue'
 import reactframe from '../views/frame/reactframe.vue'
+import interviewv from '../views/frame/interviewv.vue'
+import interviewr from '../views/frame/interviewr.vue'
 
 import Createartical from '../views/createartical/index.vue'
 import Login from '../views/login/login.vue'
@@ -91,6 +93,16 @@ const routes = [
         path:'reactframe',
         name:'reactframe',
         component: reactframe
+      },
+      {
+        path: 'interviewv',
+        name: 'interviewv',
+        component: interviewv
+      },
+      {
+        path: 'interviewr',
+        name: 'interviewr',
+        component: interviewr
       },
       {
         path: 'createartical',

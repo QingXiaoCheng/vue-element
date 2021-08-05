@@ -8,7 +8,7 @@
 - 对阶运算：对阶是指将两个进行运算的浮点数的阶码对齐的操作。对阶的目的是为使两个浮点数的尾数能够进行加减运算。
 ## 2. JS数据类型
 - 基本类型： `Number、Boolean、String、null、undefined、symbol` 
-- 引用类型： `Object、Array、Function `
+- 引用类型： `Object、Array、Function`
 
 ## 3. JS 能支持的最大数字是多少
 答：`Math.pow(2, 53)`

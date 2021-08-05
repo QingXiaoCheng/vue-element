@@ -227,8 +227,7 @@ export default {
 }
 .aside {
   width: 200px;
-  height: 100%;
-  overflow: scroll;
+  height: 100%; 
   .el-aside,
   .el-menu {
     height: 100%;
@@ -296,7 +295,6 @@ export default {
 
 .el-main {
   background-color: #f0f2f5;
-  padding: 20px 0 !important;
-  padding-top: 20px;
+  // padding-top: 20px;
 }
 </style>
