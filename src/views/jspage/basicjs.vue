@@ -7,7 +7,7 @@
         prop="date"
         label="标题" >
         <template slot-scope="scope">
-          <div class="table-title"> <span @click="$router.push('look')">{{ scope.row.title }} </span></div>
+          <div class="table-title"> <span @click="toLookAr(scope.row)">{{ scope.row.title }} </span></div>
         </template>
       </el-table-column>
       <el-table-column
@@ -68,25 +68,46 @@ export default{
   data(){
     return {
       searchkey: '',
-       tableData: [{
-          date: '2016-05-02',
-          status: '完成',
-          title: '理解 Javascript 执行上下文和执行栈',
-          count:1,
-          articleId: Math.random()
-        }, {
-          date: '2016-05-02',
-          status: '完成',
-          title: '理解 Javascript 执行上下文和变量对象',
-          count:1,
-          articleId: Math.random()
-        },{
-          date: '2016-05-02',
-          status: '未完成',
-          title: '理解 Javascript 内存机制',
-          count:1,
-          articleId: Math.random()
-        }]
+      tableData: []
+    }
+  },
+  created(){
+    this.getTableData()
+  },
+  methods:{
+    getTableData(){
+      let data = {
+        out:'JS',
+        in:'basicjs'
+      }
+      this.$api.getTableList(data).then(res=>{ 
+        console.log('==', res);
+        this.tableData = res.data
+      })
+    },
+    toLookAr(row){ 
+      this.$store.commit('setArticalId', row.articleId)
+      this.$router.push({
+        name:'look',
+        params: {
+          articleId: row.articleId,
+          subfield: false,
+          editable: false,
+          toolbarsFlag: false
+        }
+      })
+    },
+     handleEdit(i, row){
+      console.log(i, row);
+      this.$router.push({
+        name:'look',
+        params: {
+          articleId: row.articleId,
+          subfield: true,
+          editable: true,
+          toolbarsFlag: true
+        }
+      })
     }
   }
 }

@@ -7,7 +7,7 @@
         prop="date"
         label="标题" >
         <template slot-scope="scope">
-          <div class="table-title"> <span @click="$router.push('look')">{{ scope.row.title }} </span></div>
+          <div class="table-title"> <span @click="toLookAr(scope)">{{ scope.row.title }} </span></div>
         </template>
       </el-table-column>
       <el-table-column
@@ -58,12 +58,24 @@ export default{
     getTableData(){
       let data = {
         out:'H5C3',
-        in:'interview'
+        in:'interviewh'
       }
       this.$api.getTableList(data).then(res=>{ 
         this.tableData = res.data
       })
-    }
+    },
+    toLookAr(scope){ 
+      this.$store.commit('setArticalId', scope.row.articleId)
+      this.$router.push({
+        name:'look',
+        params: {
+          articleId:scope.row.articleId,
+          subfield: false,
+          editable: false,
+          toolbarsFlag: false
+        }
+      })
+    },
   }
 }
 </script>

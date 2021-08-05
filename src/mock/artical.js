@@ -1,6 +1,8 @@
 
 module.exports = {
   "H5C3-HTML-1": require('../assets/md/front.md'),
+  "H5C3-interviewh-1": require('../assets/md/H5C3-interviewh-5844567.md'),
+  "JS-basicjs-1": require('../assets/md//JS-basicjs-5442281.md'),
   "JS-advancejs-1": require('../assets/md/JS-advancejs-8184569.md'),
   "JS-advancejs-2": require('../assets/md/JS-advancejs-5436528.md'),
   "JS-advancejs-3": require('../assets/md/JS-advancejs-1523277.md'),
