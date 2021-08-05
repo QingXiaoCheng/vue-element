@@ -105,3 +105,38 @@ domNodeArrays.unshift("h1"); // 505 不同环境下数据不同
 - `let arr = Array.from(arguments);`
 - `let arr = [...arguments];`
 
+
+## 数组去重的方法
+1、set 与解构赋值去重
+```js
+function unique(arr) {
+    if (!Array.isArray(arr)) {
+        console.log('type error!')
+        return
+    }
+    return [...new Set(arr)]
+}
+
+```
+
+2、Array.from与set去重
+```js
+function unique(arr) {
+    if (!Array.isArray(arr)) {
+        console.log('type error!')
+        return
+    }
+    return Array.from(new Set(arr))
+}
+
+```
+
+3、使用filter
+```js
+var array=[1,2,3,2,2,4];
+
+var newArray=array.filter((value,index,arr)=>{
+     return arr.indexOf(value)==index
+
+})
+```
