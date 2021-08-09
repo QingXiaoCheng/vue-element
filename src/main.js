@@ -10,6 +10,7 @@ import api from './api/axios.js'
 import mavonEditor from 'mavon-editor'
 import 'mavon-editor/dist/css/index.css'
 
+import Showdown from 'showdown'
 
 
 import "./permission.js"
@@ -19,7 +20,7 @@ Vue.config.productionTip = false
 Vue.use(ElementUI)  
 Vue.prototype.$api = api
 
-
+Vue.prototype.converter = new Showdown.Converter()
 
 new Vue({
   router,

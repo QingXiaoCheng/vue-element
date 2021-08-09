@@ -19,11 +19,13 @@ import reactframe from '../views/frame/reactframe.vue'
 import interviewv from '../views/frame/interviewv.vue'
 import interviewr from '../views/frame/interviewr.vue'
 
+import algorithm from '../views/algo/algorithm.vue'
 import Createartical from '../views/createartical/index.vue'
 import Login from '../views/login/login.vue'
-
+import Tool from '../views/tool/tool.vue'
 
 import Look from '../views/common/look.vue'
+import codepage from '../views/common/codepage.vue'
 import Personal from '../views/common/personal.vue'
 import Error from '../views/common/error.vue'
 Vue.use(VueRouter)
@@ -105,6 +107,16 @@ const routes = [
         component: interviewr
       },
       {
+        path: 'algorithm',
+        name:'algorithm',
+        component: algorithm
+      },
+      {
+        path:'tool',
+        name:'tool',
+        component:Tool
+      },
+      {
         path: 'createartical',
         name: 'createartical',
         component: Createartical
@@ -118,6 +130,11 @@ const routes = [
         path: 'look',
         name: 'look',
         component: Look
+      },
+      {
+        path: 'codepage',
+        name: 'codepage',
+        component:codepage
       },
       {
         path: 'personal',

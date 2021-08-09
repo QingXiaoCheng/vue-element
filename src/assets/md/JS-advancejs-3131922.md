@@ -69,6 +69,15 @@ xhr.onreadystatechange = function () {
 ```
 
 
+### 思考：为什么 onreadystatechange 函数的执行要同时判断 readyState 和 status 呢?
+
+- 只判断 readyState
+  - 服务响应出错了，但还是返回了信息。此时由于只做 readyState 判断，它不理会 status 返回的结果是200、404还是500，只要响应成功返回了，就执行接下来的javascript代码，结果会造成各种不可预料的错误，所以只判断 readyState 是不对滴~
+- 只判断 status
+  - 服务响应的状态码为200，onreadystatechange函数总共执行了三次（可以使用ajax请求代码自行检验），就是说onreadystatechange函数的执行不是只在readyState变为4的时候触发，而是readyState（2、3、4）的每次变化都会触发，由此可见单独判断 status 也是行不通的
+- 由上得出结论，判断 onreadystatechange 函数的执行 readyState 和 status 缺一不可。由试验可知，readyState 的每次变化都会触发 onreadystatechange 函数，若是先判断 status，那么每次都会多判断一次 status。两者的判断先后顺序不会影响结果，但相对而言，优先判断 readyState 可以对性能有微许的优化
+
+
 
 
 

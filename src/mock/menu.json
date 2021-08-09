@@ -11,21 +11,9 @@
     "menuIcon": "el-icon-grape",
     "arti":"H5C3",
     "children": [
-      {
-        "id": "11",
-        "menutitle": "HTML",
-        "link": "html"
-      },
-      {
-        "id": "12",
-        "menutitle": "CSS",
-        "link": "css"
-      },
-      {
-        "id": "13",
-        "menutitle": "H5C3面试题",
-        "link": "interviewh"
-      }
+      { "id":"11", "menutitle": "HTML", "link": "html" },
+      { "id":"12", "menutitle": "CSS", "link": "css" },
+      { "id":"13", "menutitle": "H5C3面试题", "link": "interviewh"}
     ]
   },
   {
@@ -34,21 +22,9 @@
     "arti":"JS",
     "menuIcon": "el-icon-cherry",
     "children": [
-      {
-        "id": "21",
-        "menutitle": "JS基础",
-        "link": "basicjs"
-      },
-      {
-        "id": "22",
-        "menutitle": "JS高级",
-        "link": "advancejs"
-      },
-      {
-        "id": "23",
-        "menutitle": "JS面试题",
-        "link": "interviewj"
-      }
+      { "id":"21", "menutitle": "JS基础", "link": "basicjs" },
+      { "id":"22", "menutitle": "JS高级", "link": "advancejs" },
+      { "id":"23", "menutitle": "JS面试题", "link": "interviewj" }
     ]
   },
   {
@@ -56,11 +32,9 @@
     "menutitle": "服务端基础",
     "arti":"NODE",
     "menuIcon": "el-icon-cherry",
-    "children": [{
-      "id":"31",
-      "menutitle":"Nodejs面试题",
-      "link" :"interviewn"
-    }]
+    "children": [
+      { "id":"31", "menutitle":"Nodejs面试题", "link" :"interviewn" }
+    ]
   },
   {
     "id":"4",
@@ -68,11 +42,7 @@
     "arti":"WEB",
     "menuIcon": "el-icon-pear",
     "children": [
-      {
-        "id": "41",
-        "menutitle": "web面试题",
-        "link": "interviewm"
-      }
+      { "id":"41", "menutitle": "web面试题", "link": "interviewm" }
     ]
   }, 
   {
@@ -81,39 +51,19 @@
     "arti":"FRAME",
     "menuIcon": "el-icon-orange",
     "children": [
-      {
-        "id": "51",
-        "menutitle": "VUE",
-        "link": "vueframe"
-      },
-      {
-        "id": "52",
-        "menutitle": "REACT",
-        "link": "reactframe"
-      },
-      {
-        "id": "53",
-        "menutitle": "VUE面试题",
-        "link": "interviewv"
-      },
-      {
-        "id":"54",
-        "menutitle":"REACT面试题",
-        "link": "interviewr"
-      }
+      { "id":"51", "menutitle": "VUE", "link": "vueframe" },
+      { "id":"52", "menutitle": "REACT", "link": "reactframe" },
+      { "id":"53", "menutitle": "VUE面试题", "link": "interviewv" },
+      { "id":"54", "menutitle":"REACT面试题", "link": "interviewr" }
     ]
   },
   {
     "id": "7",
-    "menutitle": "算法",
+    "menutitle": "代码题",
     "arti":"ALGO",
     "menuIcon": "el-icon-apple",
     "children":[
-      {
-        "id": "61",
-        "menutitle": "算法",
-        "link": "algorithm"
-      }
+      { "id":"61", "menutitle": "手写题", "link": "algorithm" }
     ]
   },
   {
@@ -122,11 +72,7 @@
     "arti":"TOOL",
     "menuIcon": "el-icon-apple",
     "children":[
-      {
-        "id": "61",
-        "menutitle": "常用工具",
-        "link": "algorithm"
-      }
+      { "id":"81", "menutitle": "常用工具", "link": "tool" }
     ]
   },
   {

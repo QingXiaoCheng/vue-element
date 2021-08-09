@@ -16,6 +16,9 @@ module.exports = {
   "JS-interviewj-2": require('../assets/md/JS-interviewj-4477776.md'),
   "JS-interviewj-3": require('../assets/md/JS-interviewj-9388537.md'),
   "WEB-interviewm-1": require('../assets/md/WEB-interviewm-8861213.md'),
+  "WEB-interviewm-2": require('../assets/md/WEB-interviewm-6773241.md'),
   "FRAME-interviewv-1": require('../assets/md/FRAME-interviewv-4793585.md'),
-  "FRAME-interviewr-1": require('../assets/md/FRAME-interviewr-4537422.md')
+  "FRAME-interviewr-1": require('../assets/md/FRAME-interviewr-4537422.md'),
+  "ALGO-algorithm-1": require('../assets/md/ALGO-algorithm-9822997.md'),
+  "TOOL-tool-1": require('../assets/md/TOOL-tool-8363698.md')
 }
