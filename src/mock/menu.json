@@ -72,7 +72,7 @@
     "arti":"TOOL",
     "menuIcon": "el-icon-apple",
     "children":[
-      { "id":"81", "menutitle": "常用工具", "link": "tool" }
+      { "id":"81", "menutitle": "常用工具s", "link": "tool" }
     ]
   },
   {

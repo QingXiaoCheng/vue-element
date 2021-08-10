@@ -1,37 +1,40 @@
 <template>
   <div class="content">
     <el-container style="height: 100vh; text-align: left">
-      <div class="aside">
-        <el-aside width="200px">
-          <el-menu
+      <div class="aside"> 
+      <el-menu
             unique-opened
-            router
+            router 
+            class="el-menu-vertical-demo" 
             :default-active="activemenu"
-            @select="selectMenu"
-          >
-            <div v-for="item in menulist" :key="item.id">
-              <el-submenu :index="item.id" v-if="item.children">
-                <template slot="title"
-                  ><i :class="item.menuIcon"></i> {{ item.menutitle }}</template
-                >
-                <el-menu-item-group v-for="i in item.children" :key="i.id">
-                  <el-menu-item :index="i.id" :route="i.link">{{
-                    i.menutitle
-                  }}</el-menu-item>
-                </el-menu-item-group>
-              </el-submenu>
-              <el-menu-item :index="item.id" :route="item.link" v-else>
-                <i :class="item.menuIcon"></i>
-                <span slot="title">{{ item.menutitle }}</span>
+            @select="selectMenu" 
+            :collapse="isCollapse" 
+            mode="vertical"
+          > 
+          <el-submenu v-for="item in menulist" :key="item.id" :index="item.id" v-if="item.children">
+            <template slot="title">
+              <i :class="item.menuIcon"></i>
+              <span slot="title">{{ item.menutitle }}</span>
+            </template>
+            <el-menu-item-group v-for="i in item.children" :key="i.id">
+              <el-menu-item :index="i.id" :route="i.link">
+                {{ i.menutitle }}
               </el-menu-item>
-            </div>
-          </el-menu>
-        </el-aside>
-      </div>
+            </el-menu-item-group>
+          </el-submenu>
+          <el-menu-item :index="item.id" :route="item.link" v-else>
+            <i :class="item.menuIcon"></i>
+            <span slot="title">{{ item.menutitle }}</span>
+          </el-menu-item> 
+      </el-menu> 
+      </div> 
       <el-container>
         <el-header height="100px">
           <div class="header">
-            <i class="el-icon-s-fold" style="margin-right: 15px"></i>
+            <div @click="changeCollapse" style="color:#606266;margin-right:10px;">
+              <i class="el-icon-s-fold" v-if="!isCollapse"></i>
+              <i class="el-icon-s-unfold" v-if="isCollapse"></i> 
+            </div>
             <el-breadcrumb separator="/">
               <el-breadcrumb-item :to="{ path: 'mainpage' }"
                 >首页</el-breadcrumb-item
@@ -40,8 +43,7 @@
                 v-for="item in getBread"
                 :key="item.menutitle"
                 >{{ item.menutitle }}</el-breadcrumb-item
-              >
-              <!-- <el-breadcrumb-item :to="{ path: 'h5' }">H5</el-breadcrumb-item>  -->
+              > 
             </el-breadcrumb>
             <div class="menuRight">
               <el-dropdown
@@ -99,6 +101,7 @@ export default {
         },
       ],
       activemenuP: ['0'],
+      isCollapse:false
     }
   },
   created() {
@@ -214,6 +217,9 @@ export default {
       })
       this.setTagClass(i - 1)
     },
+    changeCollapse(){
+      this.isCollapse = !this.isCollapse
+    }
   },
 }
 </script>
@@ -221,12 +227,16 @@ export default {
 
 
 <style lang="less">
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+    width: 200px;
+    min-height: 400px;
+  }
 .content {
   height: 100%;
   overflow: hidden;
 }
 .aside {
-  width: 200px;
+  // width: 200px;
   height: 100%; 
   .el-aside,
   .el-menu {

@@ -1,9 +1,8 @@
-const path = require('path')
-
+const path = require('path') 
 module.exports = {
   publicPath: '/',
   outputDir: 'dist',
-  assetsDir: "",
+  assetsDir: "",  // 放置生成的静态资源
   indexPath: "index.html",
   lintOnSave: false,
   runtimeCompiler: false,
@@ -11,12 +10,13 @@ module.exports = {
     host: '0.0.0.0', // 设置为0.0.0.0则所以地址都能访问
     port: 8081,
     open: true ,   // 设置自动打开浏览器
-    proxy: {
-      '/api': {
-        target: 'http://localhost:8081/',
-        changeOrigin: true,
+    proxy: {  // 反向代理
+      '/api': {  // 代理api
+        target: 'http://localhost:8081/', // 服务器api地址
+        changeOrigin: true,  // 是否跨域
+        ws: true,// proxy websockets
         pathRewrite: {
-          '^/api': '/mock'
+          '^/api': '/mock'  // 重写路径
         }
       }
     } 
@@ -29,7 +29,8 @@ module.exports = {
         `
       },
       less:{}
-    }
+    },
+    extract: false // 是否使用css分离插件 ExtractTextPlugin
   },
   configureWebpack: {
     module: {

@@ -127,11 +127,6 @@ const routes = [
         component: Error
       },
       {
-        path: 'look',
-        name: 'look',
-        component: Look
-      },
-      {
         path: 'codepage',
         name: 'codepage',
         component:codepage
@@ -142,6 +137,11 @@ const routes = [
         component: Personal
       }
     ]
+  },
+  {
+    path: 'look',
+    name: 'look',
+    component: Look
   }
   
 ]
